@@ -2,16 +2,16 @@
 
 // Offset by +6 columns, factoring in the columns of left keyboard split
 &default_transform {
-    col-ofset = <6>;
+    col-offset = <6>;
 };
 
 &kscan0 {
     col_gpios
-    = <&gpio0 20 GPIO_ACTIVE_HIGH> // Column 0
-    , <&gpio0 22 GPIO_ACTIVE_HIGH> // Column 1
-    , <&gpio0 24 GPIO_ACTIVE_HIGH> // Column 2
-    , <&gpio1 0  GPIO_ACTIVE_HIGH> // Column 3
-    , <&gpio0 11 GPIO_ACTIVE_HIGH> // Column 4
-    , <&gpio1 4  GPIO_ACTIVE_HIGH> // column 5
+        = <&gpio0 20 GPIO_ACTIVE_HIGH> // Column 0
+        , <&gpio0 22 GPIO_ACTIVE_HIGH> // Column 1
+        , <&gpio0 24 GPIO_ACTIVE_HIGH> // Column 2
+        , <&gpio1 0  GPIO_ACTIVE_HIGH> // Column 3
+        , <&gpio0 11 GPIO_ACTIVE_HIGH> // Column 4
+        , <&gpio1 4  GPIO_ACTIVE_HIGH> // column 5
     ;
 };
