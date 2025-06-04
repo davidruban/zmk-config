@@ -1,0 +1,14 @@
+file_format: "1"
+id: dactyl
+name: Dactyl
+type: shield
+url: https://github.com/davidruban/zmk-config/
+requires: [nice_nano_v2]
+features:
+ - Concave Keywell
+ - Kinesis Advantage (68) Keycap Support
+ - Wireless Split Connectivity
+ - Bluetooth Pairing
+siblings:
+ - dactyl_left
+ - dactyl_right
