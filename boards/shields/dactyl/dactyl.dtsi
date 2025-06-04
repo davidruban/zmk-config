@@ -60,6 +60,6 @@
     // OPTIONAL: Specifies the "default" physical layout as per the physical_layout block above
     chosen {
         zmk,kscan = &kscan0;
-        zmk,physical-layout = & physical_layout0
+        zmk,physical-layout = &physical_layout0;
     };
 };
