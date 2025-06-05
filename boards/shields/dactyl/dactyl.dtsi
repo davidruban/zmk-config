@@ -3,6 +3,8 @@
 #include <dt-bindings/zmk/matrix_transform.h>
 
 / {
+    dummy = "inclusion test";
+
     // Specifies the matrix layout of both split keyboards combined
     default_transform: keymap_transform0 {
         compatible = "zmk,matrix-transform";
