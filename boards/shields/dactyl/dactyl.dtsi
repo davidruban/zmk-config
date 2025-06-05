@@ -30,4 +30,36 @@
                                         RC(5,2) RC(5,1) RC(5,0)  RC(5,6)  RC(5,7) RC(5,8)
         >;
     };
+
+    // Specifies the GPIO pins used on the Microcontroller to map the Columns & Rows
+    kscan0: kscan0 {
+        compatible = "zmk,kscan-gpio-matrix";
+        diode-direction = "col2row";
+        wakeup-source;
+
+        // Rows are identical between left and right split
+        row_gpios
+            = <&gpio0 29 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // Row 0
+            , <&gpio0 2  (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // Row 1
+            , <&gpio1 15 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // Row 2
+            , <&gpio1 13 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // Row 3
+            , <&gpio1 11 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // Row 4
+            , <&gpio0 10 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // Row 5
+            ;
+    };
+ 
+    // OPTIONAL: Allows for specifiying different "pre-baked" layouts for "dynamic keyboards"
+    // Commonly used in conjunction with "ZMK Studio" to switch layouts on the fly via GUI after flashing
+    physical_layout0: physical_layout0 {
+        compatible = "zmk,physical-layout";
+        display-name = "Default Layout";
+        kscan = <&kscan0>;
+        transform = <&default_transform>;
+    };
+
+    // OPTIONAL: Specifies the "default" physical layout as per the physical_layout block above
+    chosen {
+        zmk,kscan = &kscan0;
+        zmk,physical-layout = &physical_layout0;
+    };
 };
