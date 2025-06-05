@@ -1,10 +1,5 @@
 #include "dactyl.dtsi"
 
-// Offset by +6 columns, factoring in the columns of left keyboard split
-&default_transform {
-    col-offset = <6>;
-};
-
 // Specifies the GPIO pins used on the Microcontroller to map the Columns & Rows
 kscan0: kscan0 {
     compatible = "zmk,kscan-gpio-matrix";
@@ -28,4 +23,9 @@ kscan0: kscan0 {
         , <&gpio0 11 GPIO_ACTIVE_HIGH> // Column 4
         , <&gpio1 4  GPIO_ACTIVE_HIGH> // column 5
     ;
+};
+
+// Offset by +6 columns, factoring in the columns of left keyboard split
+&default_transform {
+    col-offset = <6>;
 };
