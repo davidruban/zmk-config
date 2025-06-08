@@ -8,14 +8,14 @@ if SHIELD_DACTYL_LEFT
 
 endif
 
-if SHEILD_DACTYL_RIGHT
+if SHIELD_DACTYL_RIGHT
 
     config ZMK_KEYBOARD_NAME
-        default "Datyl Right"
+        default "Dactyl Right"
 
 endif
 
-if SHIELD_DACTYL_LEFT || SHEILD_DACTYL_RIGHT
+if SHIELD_DACTYL_LEFT || SHIELD_DACTYL_RIGHT
 
     config ZMK_SPLIT
         default y
