@@ -9,8 +9,9 @@
 
         // Default layer. 
         // Kinesis layout with a few changes:
-        // 1. Capslock swapped with ESC
+        // 1. Capslock replaces with ESC (hold key to access Bluetooth/MCU menu)
         // 2. Swapped Up and Down arrows
+        // 3. Delete key replaced with Super/Command
 
         default_layer { // Layer 0
             display-name = "Default";
@@ -22,7 +23,7 @@
                 &kp GRAVE &kp BSLH &kp LEFT  &kp RIGHT                                           &kp DOWN  &kp UP    &kp LBKT  &kp RBKT
                                                        &kp LCTRL &kp LALT    &kp RGUI  &kp RCTRL
                                                                  &kp HOME    &kp PG_UP
-                                             &kp BSPC  &kp DEL   &kp END     &kp PG_DN &kp RET   &kp SPACE
+                                             &kp BSPC  &kp LGUI  &kp END     &kp PG_DN &kp RET   &kp SPACE
             >;
         };
         
